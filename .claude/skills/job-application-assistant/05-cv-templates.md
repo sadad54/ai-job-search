@@ -59,7 +59,7 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Adnan Mashrur Sadad - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -69,13 +69,13 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
+\name{Adnan Mashrur}{Sadad}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\address{Kuala Lumpur, Malaysia}{}{}
+\phone[mobile]{+60 11-3968 7435}
+\email{adnanmashrursadad@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/adnan-mashrur-sadad-87a45b237/}{LinkedIn}, \href{https://github.com/sadad54}{GitHub}, \href{https://portfolio-sadad.vercel.app/}{Portfolio}}
 
 \begin{document}
 \makecvtitle
@@ -137,11 +137,14 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For AI/ML Engineer roles:**
+> Software engineering graduate building LLM applications and deployable ML pipelines, with enterprise development experience at Joget and first-author research in RAG and Text-to-SQL evaluation. Combines applied ML (PyTorch, XGBoost, scikit-learn) with production deployment skills (FastAPI, Docker, ONNX, Google Cloud), evidenced by an end-to-end streaming fraud-detection pipeline with drift-triggered retraining and a load-tested inference API.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For Software Engineer (Backend/Full-Stack) roles:**
+> Software engineering graduate with enterprise development experience at Joget, building API-backed applications with Python, FastAPI, React, and SQL. Delivers full-stack systems end-to-end, from a Redpanda/PyFlink streaming pipeline to a tested React/FastAPI interview platform with 89% statement coverage and CI browser checks, with hands-on testing, CI, and cloud deployment experience.
+
+**For Data Scientist / Applied Scientist roles:**
+> Software engineering graduate with first-author research in RAG evaluation and Text-to-SQL answerability under schema evolution, plus applied modelling experience (XGBoost, GraphSAGE, regression benchmarking on temporal holdouts). Pairs rigorous evaluation methodology - chronological splits, holdout benchmarking, false-alarm-rate analysis - with the engineering skills to deploy models into production APIs.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 

@@ -52,6 +52,7 @@ Key flags:
 - `--jobage <days>` — posted within N days: `1`, `7`, `14`, `30`. Omit for all postings.
 - `--jobage-minutes <n>` — posted within N minutes (sub-day precision, e.g. `30`). Conflicts with `--jobage` — pass only one.
 - `--remote <mode>` — `remote`, `hybrid`, or `onsite` (workplace-type filter).
+- `--visa-hint` — appends "visa sponsorship" to the keyword query. **Heuristic only** — LinkedIn's public `jobs-guest` endpoint has no real sponsorship filter (verified: the authenticated UI's `f_VJ` filter param is a no-op on this unauthenticated endpoint), so this is low-precision and has no recall guarantee. Use it as a starting filter, then manually verify sponsorship on each posting's detail page or the company's own careers page.
 - `--page <n>` — page number (1-indexed, 10 results per page).
 - `--limit <n>` / `-n <n>` — cap total results emitted (client-side).
 - `--format json|table|plain` — default `json`.
@@ -81,9 +82,28 @@ bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "paralegal" -l "
 # Engineer roles, remote, posted in the last 30 minutes
 bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "engineer" -l "Remote" --jobage-minutes 30 --format table
 
+# US roles with a visa-sponsorship keyword hint (low precision — verify manually)
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "machine learning engineer" -l "United States" --visa-hint --format table
+
+# Denmark, hybrid, visa-sponsorship keyword hint
+bun run .agents/skills/linkedin-search/cli/src/cli.ts search -q "AI engineer" -l "Denmark" --remote hybrid --visa-hint --format table
+
 # Full details for a specific job
 bun run .agents/skills/linkedin-search/cli/src/cli.ts detail 4426311357 --format plain
 ```
+
+## Remote roles with potential visa sponsorship (US/EU)
+
+Adnan is based in Malaysia and open to remote roles or relocation to Denmark; onsite
+relocation elsewhere is a stretch (see CLAUDE.md deal-breakers). For US/EU-market searches:
+
+- Pass a specific country as `--location` (LinkedIn has no continent-wide "Europe" location
+  string) — e.g. `"United States"`, `"Denmark"`, `"Germany"`, `"Netherlands"`, `"Remote"`.
+- Add `--visa-hint` as a low-precision starting filter (see flag docs above) — it does not
+  reliably surface every sponsoring employer, nor exclude non-sponsoring ones.
+- The `detail` command's full description is the most reliable signal for sponsorship
+  language ("H-1B", "visa sponsorship available", "authorized to work without sponsorship
+  required") — check it before treating a result as a real candidate.
 
 ## Output formats
 

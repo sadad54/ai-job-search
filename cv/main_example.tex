@@ -1,4 +1,4 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - Adnan Mashrur Sadad
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
@@ -40,7 +40,7 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Adnan Mashrur Sadad - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -50,13 +50,13 @@
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
+\name{Adnan Mashrur}{Sadad}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\address{Kuala Lumpur, Malaysia}{}{}
+\phone[mobile]{+60 11-3968 7435}
+\email{adnanmashrursadad@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/adnan-mashrur-sadad-87a45b237/}{LinkedIn}, \href{https://github.com/sadad54}{GitHub}, \href{https://portfolio-sadad.vercel.app/}{Portfolio}}
 
 \begin{document}
 
@@ -67,7 +67,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Software engineering graduate building LLM applications and deployable ML pipelines, with enterprise development experience at Joget and first-author research in RAG and Text-to-SQL evaluation. Combines applied machine learning (PyTorch, XGBoost, scikit-learn) with production deployment skills (FastAPI, Docker, ONNX, Google Cloud) and full-stack development (React, TypeScript, SQL).}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -77,15 +77,15 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{AI \& Data}: Python, SQL, PyTorch, scikit-learn, XGBoost, pandas, NumPy, Hugging Face, RAG, LLM evaluation
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Applications}: FastAPI, Pydantic, React, TypeScript, Groq, Text-to-SQL, structured-output validation
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{ML Systems \& Infra}: Docker, Google Cloud, Kafka/Redpanda, PyFlink, MLflow, ONNX, GitHub Actions
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Languages \& Backend}: Java, JavaScript, Dart, SQLAlchemy, Flutter, Firebase, REST APIs
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Engineering Practice}: Git, automated testing, CI/CD, Agile development
 
 \end{itemize}
 
@@ -98,31 +98,49 @@
 \begin{itemize}
 
 % --- Most Recent Role ---
-\item{\cventry{[YYYY-Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{Oct 2024 - Mar 2025}{Software Developer Intern}{Joget Inc.}{Kuala Lumpur, Malaysia}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1 - be specific, use numbers where possible]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
-    \item {[Achievement or responsibility 4]}
+    \item {Built and deployed Joget DX workflow automations and UI components for client teams, working with senior engineers, QA, and product managers in Agile sprints}
+    \item {Integrated REST APIs to remove manual data re-entry and maintained application modules through recurring production release cycles}
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     INDEPENDENT PROJECTS
+% ============================================================
+
+\section{Selected Projects}
+\vspace{1pt}
+\begin{itemize}
+
+\item{\cventry{2026}{Driftline -- Streaming Fraud Detection and MLOps}{}{}{}{\vspace{1pt}
+\begin{itemize}
+    \item {Built a streaming fraud-detection pipeline replaying 590K transactions through Redpanda/PyFlink; engineered a GraphSAGE model over a 605K-node identity graph with unit-tested controls against data leakage}
+    \item {Evaluated XGBoost using a chronological split (0.4751 PR-AUC vs. 0.6974 on a random split); implemented drift-triggered retraining with a promotion gate (candidate 0.4802 vs. 0.2811 incumbent PR-AUC)}
+    \item {Deployed inference through ONNX and FastAPI on Google Cloud; load-tested 10,018 requests with zero failures and 380ms p95 latency at 50 concurrent users}
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{2026}{InterviewPilot -- Applied AI Interview Platform}{}{}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
+    \item {Built a React/FastAPI interview application with persistent sessions, Groq transcription, schema-validated AI answer evaluation, and bounded agentic follow-ups, with repair loops and disclosed fallback scoring}
+    \item {Validated the backend with 19 tests and 89\% statement coverage, plus CI browser checks from session creation to report generation}
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{2026}{Freight Rate ML -- Predictive Modelling}{}{}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
+    \item {Benchmarked regression models on a 9,523-row temporal holdout with training-only preprocessing; boosted MAPE was 6.89\% vs. 8.28\% for the linear baseline}
+\end{itemize}}}
+
+\vspace{3pt}
+
+\item{\cventry{Final-Year Project}{ExpenSense -- Personal Finance Mobile Application}{}{}{}{\vspace{1pt}
+\begin{itemize}
+    \item {Developed a Flutter/Firebase application with OCR-powered receipt scanning, automated expense logging, and expense classification for income-tax readiness, integrating the OCRSpace API}
 \end{itemize}}}
 
 \end{itemize}
@@ -135,14 +153,8 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
-
-\vspace{3pt}
-
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
+\item{\cventry{2021-2026}{B.Sc. Computer Science (Software Engineering) with Honours}{Universiti Teknologi Malaysia (UTM), MJIIT}{Kuala Lumpur, Malaysia}{}{\vspace{1pt}
+CGPA: 3.43/4.00. Dean's List: 2022/2023, 2025/2026.
 }}
 
 \end{itemize}
@@ -154,7 +166,7 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item {[Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).}
+\item {English (native/fluent), Bengali (native).}
 \end{itemize}
 
 % ============================================================
@@ -164,7 +176,8 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Publications}
 \vspace{1pt}
 \begin{itemize}
-\item {[Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}}
+\item {Adnan Mashrur Sadad (first author) (2025-2026). SAFE-RAG: Regulatory RAG Evaluation. Short paper under review at ALTA 2026.}
+\item {Adnan Mashrur Sadad (first author) (2026). Text-to-SQL Answerability under Schema Evolution. Manuscript complete, not yet submitted.}
 \end{itemize}
 
 % ============================================================
@@ -174,7 +187,8 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Honors and Awards}
 \vspace{1pt}
 \begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item{\textbf{Gold Medal \& Best Video Award} -- myHCI-UX Student Design Challenge (Oct 2025).}
+\item{\textbf{Secretary Treasurer, SOFEA Society} -- organised AI workshops for 200+ students (2022-2023).}
 \end{itemize}
 
 % ============================================================

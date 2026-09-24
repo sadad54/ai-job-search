@@ -1,10 +1,10 @@
-# Job Application Assistant for [YOUR_NAME]
+# Job Application Assistant for Adnan Mashrur Sadad
 
 <!-- SETUP: This file is populated by running /setup -->
 <!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Adnan Mashrur Sadad, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,76 +16,79 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Adnan Mashrur Sadad
+- **Location:** Kuala Lumpur, Malaysia (open to remote and to Denmark; onsite relocation elsewhere is a stretch, see Deal-breakers)
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
+  | English | Native/Fluent |
+  | Bengali | Native |
   <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
   working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
   undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
   lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
   04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+- **CV language:** English <!-- English unless your market expects otherwise; /setup asks -->
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Recent graduate, actively job-searching
+- **LinkedIn headline:** "AI/ML Engineer | Applied AI & ML Systems"
+- **LinkedIn:** https://www.linkedin.com/in/adnan-mashrur-sadad-87a45b237/
+- **GitHub:** https://github.com/sadad54
+- **Portfolio:** https://portfolio-sadad.vercel.app/
 
 ### Education
 <!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **B.Sc. Computer Science (Software Engineering) with Honours** (2021-2026) - Universiti Teknologi Malaysia (UTM), MJIIT, Kuala Lumpur
+  - CGPA: 3.43/4.00; Dean's List 2022/2023, 2025/2026
 
 ### Professional Experience
 <!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Software Developer Intern** (Oct 2024 - Mar 2025) - **Joget Inc.** (Kuala Lumpur, Malaysia)
+  - Built and deployed Joget DX workflow automations and UI components for client teams, working with senior engineers, QA, and product managers in Agile sprints
+  - Integrated REST APIs to remove manual data re-entry and maintained application modules through recurring production release cycles
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Python, PyTorch, scikit-learn, XGBoost, FastAPI, SQL, RAG, LLM evaluation
+- **Secondary:** React, TypeScript, JavaScript, Java, Dart, SQLAlchemy, Pydantic, Flutter, Firebase
+- **Domain:** Applied AI/ML systems (fraud detection, RAG, LLM evaluation, Text-to-SQL), backend/full-stack product engineering
+- **Software:** Docker, Google Cloud, Kafka/Redpanda, PyFlink, MLflow, ONNX, Git, GitHub Actions
 
 ### Certifications
 <!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- None recorded yet
 
 ### Publications
 <!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- Adnan Mashrur Sadad (first author) (2025-2026). SAFE-RAG: Regulatory RAG Evaluation. Short paper under review at ALTA 2026.
+- Adnan Mashrur Sadad (first author) (2026). Text-to-SQL Answerability under Schema Evolution. Manuscript complete, not yet submitted.
 
 ### Awards
 <!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- Gold Medal & Best Video Award - myHCI-UX Student Design Challenge (Oct 2025)
 
 ### Behavioral Profile
 <!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Adaptable across work modes** - comfortable moving between fast-paced autonomous building, structured mentorship-driven teams, and deep-focus research work depending on what the task needs
+- **Builder-researcher hybrid** - equally motivated by shipping production systems and by rigorous evaluation/benchmarking work (SAFE-RAG, Text-to-SQL benchmark)
+- **Strengths:** Independent ownership of end-to-end projects (data pipeline through deployment), first-author research discipline, cross-functional Agile collaboration (Joget internship)
+- **Growth areas:** Early-career; still building depth in large-team engineering processes beyond an internship-scale team
+- **Thrives in:** Environments that mix hands-on building with room for rigorous, research-style problem solving
 
 ### What Excites You
 <!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Building and deploying ML/LLM systems end-to-end (data pipeline to production)
+- Full-stack/backend product engineering (API-backed applications)
 
 ### Target Sectors
 <!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- AI/ML engineering: applied AI, LLM applications, MLOps
+- Software engineering: backend/full-stack product companies
 
 ### Deal-breakers
 <!-- Hard constraints on job search. Language requirements are handled separately and
 automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Minimum monthly salary RM 5,000 for Malaysia-based roles (Employment Pass Category 3 requirement); for international roles, use the local-currency equivalent as the floor and ask for more where the market supports it
+- No roles requiring relocation outside Malaysia or Denmark without remote flexibility (open to remote/hybrid roles based elsewhere)
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

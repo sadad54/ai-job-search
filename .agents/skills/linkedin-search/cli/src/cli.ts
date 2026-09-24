@@ -49,6 +49,11 @@ SEARCH FLAGS
   --jobage <days>         Posted within N days: 1, 7, 14, 30. Default: all.
   --jobage-minutes <n>    Posted within N minutes (sub-day precision). Conflicts with --jobage.
   --remote <mode>         remote | hybrid | onsite. Filter by workplace type.
+  --visa-hint             Append "visa sponsorship" to keywords. HEURISTIC ONLY —
+                          LinkedIn's guest endpoint has no real sponsorship filter
+                          (verified: the authenticated UI's f_VJ param is a no-op
+                          here), so this is low-precision and has no recall
+                          guarantee. Manually check each posting's detail/company.
   --page <n>              1-indexed page (10 results/page). Default 1.
   --limit, -n <n>         Cap results emitted (client-side).
   --format <fmt>          json (default) | table | plain.
@@ -58,6 +63,8 @@ EXAMPLES
   bun run src/cli.ts search -q "product manager" -l "Berlin, Germany" --remote remote --format table
   bun run src/cli.ts search -q "paralegal" -l "Remote" --format table
   bun run src/cli.ts search -q "engineer" -l "Remote" --jobage-minutes 30 --format table
+  bun run src/cli.ts search -q "machine learning engineer" -l "United States" --visa-hint --format table
+  bun run src/cli.ts search -q "AI engineer" -l "Denmark" --remote hybrid --visa-hint --format table
   bun run src/cli.ts detail 4300011451 --format plain
 
 Personal use only — uses LinkedIn's public pages; keep volume low (LinkedIn ToS).
@@ -68,7 +75,7 @@ Personal use only — uses LinkedIn's public pages; keep volume low (LinkedIn To
 // still prints usage.
 const KNOWN_FLAGS: Record<string, Set<string>> = {
   search: new Set([
-    "location", "query", "jobage", "jobage-minutes", "remote", "page", "limit", "format", "help", "h",
+    "location", "query", "jobage", "jobage-minutes", "remote", "visa-hint", "page", "limit", "format", "help", "h",
   ]),
   detail: new Set(["format", "help", "h"]),
 }
@@ -166,6 +173,7 @@ async function main(): Promise<number> {
       jobage: flags.jobage ? parseInt(flags.jobage as string, 10) : 9999,
       jobageMinutes: flags["jobage-minutes"] ? parseInt(flags["jobage-minutes"] as string, 10) : undefined,
       remote: typeof flags.remote === "string" ? flags.remote : undefined,
+      visaHint: flags["visa-hint"] === true,
       page: flags.page ? Math.max(1, parseInt(flags.page as string, 10)) : 1,
       limit: flags.limit ? parseInt(flags.limit as string, 10) : undefined,
       format: (["json", "table", "plain"].includes(fmt) ? fmt : "json") as SearchOpts["format"],

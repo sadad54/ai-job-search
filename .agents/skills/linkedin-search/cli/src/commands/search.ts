@@ -15,14 +15,26 @@ export interface SearchOpts {
   jobage: number
   jobageMinutes?: number
   remote?: string // "remote" | "hybrid" | "onsite"
+  visaHint?: boolean
   page: number
   limit?: number
   format: "json" | "table" | "plain"
 }
 
+// LinkedIn's public jobs-guest endpoint has no real visa-sponsorship filter
+// (verified: the authenticated UI's f_VJ param has no effect on unauthenticated
+// requests — the guest endpoint returns identical results with or without it).
+// --visa-hint is a keyword heuristic only: low precision, no recall guarantee.
+function applyVisaHint(query: string | undefined): string | undefined {
+  const hint = "visa sponsorship"
+  if (!query) return hint
+  return `${query} ${hint}`
+}
+
 function buildUrl(opts: SearchOpts): string {
   const params = new URLSearchParams()
-  if (opts.query) params.set("keywords", opts.query)
+  const keywords = opts.visaHint ? applyVisaHint(opts.query) : opts.query
+  if (keywords) params.set("keywords", keywords)
   if (opts.location) params.set("location", opts.location)
   const tpr = opts.jobageMinutes !== undefined ? minutesToTPR(opts.jobageMinutes) : jobageToTPR(opts.jobage)
   if (tpr) params.set("f_TPR", tpr)

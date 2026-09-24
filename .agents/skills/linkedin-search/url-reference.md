@@ -21,6 +21,12 @@ Query params:
 | `f_WT` | Workplace type | `1` on-site · `2` remote · `3` hybrid |
 | `start` | Pagination offset (10/page) | `0`, `10`, `20`, … |
 
+**No visa-sponsorship filter param exists on this endpoint.** Tested directly: appending
+`f_VJ=1` (the authenticated UI's "visa sponsorship" filter param) to a guest-endpoint request
+returns byte-identical top results to the same request without it — the guest endpoint ignores
+it. The CLI's `--visa-hint` flag is a keyword heuristic (appends "visa sponsorship" to
+`keywords`), not a real filter.
+
 Returns an HTML list of job cards (one `<li>` per posting). The CLI parses each card by
 its `data-entity-urn="urn:li:jobPosting:<id>"` and extracts title, company, location, date, URL.
 
